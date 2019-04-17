@@ -6,7 +6,7 @@
 /*   By: bkiehn <bkiehn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 15:00:26 by dzboncak          #+#    #+#             */
-/*   Updated: 2019/03/12 17:53:44 by bkiehn           ###   ########.fr       */
+/*   Updated: 2019/04/17 17:56:54 by bkiehn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ int		ft_printf(const char *f, ...)
 		}
 		f++;
 	}
-	close(fd);
+	if (fd != 1)
+		close(fd);
 	return (res);
 }
